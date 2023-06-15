@@ -33,7 +33,7 @@ a{
     color: #333;
     font-family:'Yanone Kaffeesatz', sans-serif;
 }
-a:hover{
+#myLinks a:hover{
     background-color: rgb(230, 225, 225);
     padding: 10px;
     border-radius: 10px;
@@ -48,22 +48,22 @@ a:hover{
    justify-content: space-between;
 }
 
-.book{
+#book{
     background-color: orangered;
     color:  white;
     padding: 10px;
     border-radius: 8px;
 }
-.book:hover{
+#myLinks #book:hover{
     background-color: rgb(211, 60, 5);
 }
-.login{
+#login{
     border: 1px solid orangered;
     padding: 10px;
     border-radius: 8px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.login:hover{
+#myLinks #login:hover{
     background-color: rgb(255, 68, 0);
     color: white;
 }
