@@ -1,68 +1,53 @@
 body{
     padding: 0;
     margin: 0;
-    
     font-family: Arial, Helvetica, sans-serif;
-}
-.nav{
-    display: flex;
-    justify-content: space-between;
-    height: fit-content;
-    padding: 13px;
-    margin: auto;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    background-color: white;
-    position: sticky;
-    top: 0;
-}
-.logo{
-    padding-left: 40px;
-    width: 20%;
-}
-a{
-    text-decoration: none;
-    font-size: 15px;
-    line-height: 24px;
-    color: #333;
-    font-family:'Yanone Kaffeesatz', sans-serif;
-}
-.sec{
-  
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 55%;
-}
-.sec>div{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.sec>div:nth-child(1)
-{
-    width: 75%;
-}
-.sec>div:nth-child(2)
-{
-    width: 15%;
-    text-align: right;
-}
-.book{
-    background-color: orangered;
-    color:  white;
-    padding: 10px;
-    border-radius: 8px;
-}
-.login{
-    border: 1px solid orangered;
-    padding: 10px;
-    border-radius: 8px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /* ---------------------------navbar------------------------- */
 
+.slide{
+    overflow: hidden;
+
+    }
+    .slider{
+       position: relative;
+        animation-name: slideranimation;
+        animation-duration: 20s;
+        width: 6750px;
+        animation-iteration-count: infinite;
+    }
+    .slider img{
+        position: relative;
+    }
+    .slider p{
+        position: absolute;
+        z-index: 1;
+        left: 30px;
+        top: 30px;
+        font-size: 100px;
+        color: white;
+    }
+   
+    .slider div{
+        width: 1350px;
+        height: 550px;;
+        float: left;
+    }
+    @keyframes slideranimation{
+        0%{ left: 0px;}
+        15%{  left: 0px;    }
+        20%{  left: -1350px;    }
+        35%{   left: -1350px;    }
+        40%{ left: -2700px;    }
+        55%{ left:-2700px;    }
+        60%{   left: -4050px;    }
+        75%{  left: -4050px;    }
+        80%{  left: -5400px;    }
+       95%{  left: -5400px;   }
+       }
+
+/* -------------------------------- */
 .head{
     display: flex;
     justify-content: space-around;
@@ -82,5 +67,238 @@ a{
     margin-bottom: 50px;
 }
 .head img{
+  width: 500px;
     height: 105%;
 }
+
+/* ---------------------services---------------------- */
+
+.ser{
+    text-align: center;
+    margin: 30px;
+}
+.service{
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    width: 90%;
+    margin: auto; 
+    gap: 25px;
+}
+.service>div>img{
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.service h3{
+    text-align: center;
+}
+.service img:hover{
+  transform: scale(1.2); 
+}
+.see{
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    width: 90%;
+    margin: auto; 
+    gap: 25px;
+}
+.see>div>img{
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+/* ---------------- */
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+  }
+  
+
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+
+  .modal-content, #caption {  
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+  }
+  
+  .see img {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .see img:hover {opacity: 0.7;}
+  
+ 
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9); 
+  }
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
+
+  /* --------------------------------------------- */
+
+  .checked {
+    color: orangered;
+  }
+  .client{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 90%;
+    margin: auto;
+    gap: 10px;
+  }
+  .client>div{
+    padding: 20px;
+    box-shadow: rgba(99, 102, 104, 0.2) 0px 8px 24px;
+  }
+  .client>div>div{
+    display: flex;
+  }
+  .client>div>div>img{
+    width: 40px;
+    border-radius: 30%;
+    margin-right: 20px;
+  }
+
+  
+  /* -----------------footer----------------------------- */
+
+  .footer{
+    background: rgb(233, 230, 230);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: space-around;
+    padding: 20px;
+  }
+
+  .footer a {
+    padding: 10px;
+    font-size: 30px;
+    width: 25px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    background: orangered;
+    color: white;
+  }
+  
+  .footer a:hover {
+      opacity: 0.7;
+  }
+
+
+  @media only screen and (max-width: 1000px) {
+    .head img{
+      width: 300px;
+    }
+    .slide img{
+      width: 1000px;
+    }
+    .service{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+    }
+    .see{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+  @media only screen and (max-width: 700px){
+    .client{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+    }
+    .slide img{
+      width: 650px;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .head img{
+      display: flex;
+      flex-direction: column;
+    }
+    .head>div:nth-child(1){
+      width: 100%;
+    }
+    .service{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+    }
+    .see{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+    }
+    .slide{
+     display: none;
+    }
+    .footer{
+      display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    }
+
+  }
+  @media only screen and (max-width: 500px){
+    .head img{
+      display: none;
+    }
+  }
