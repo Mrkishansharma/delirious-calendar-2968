@@ -8,6 +8,7 @@ require('dotenv').config();
 const { connection } = require('./Configs/db');
 const { styleRouter } = require('./Routes/style.routes');
 const { stylistRouter } = require('./Routes/stylist.routes');
+const userRoutes = require("./Routes/user.routes");
 
 
 
@@ -19,7 +20,7 @@ app.use(express.json());
 
 app.use(cors());
 
-
+app.use("/user", userRoutes)
 app.use('/style', styleRouter)
 
 app.use('/stylist', stylistRouter)
