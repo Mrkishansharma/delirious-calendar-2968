@@ -1,22 +1,22 @@
 const express = require("express");
-const app = express();
+const userrouter = express.Router();
 const User=require("../Models/user.model")
 
 const mongoose = require("mongoose");
-app.use(express.json());
+userrouter.use(express.json());
 const cors = require("cors");
-app.use(cors());
+userrouter.use(cors());
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const User = mongoose.model("UserInfo");
+
+const JWT_SECRET="veeresh";
 
 
 
 
 
 
-
-app.post("/register", async (req, res) => {
+userrouter.post("/register", async (req, res) => {
     const { fname, lname, email, password, userType } = req.body;
   
     const encryptedPassword = await bcrypt.hash(password, 10);
@@ -41,7 +41,7 @@ app.post("/register", async (req, res) => {
 
 
 
-  app.post("/login-user", async (req, res) => {
+  userrouter.post("/login-user", async (req, res) => {
     const { email, password } = req.body;
   
     const user = await User.findOne({ email });
@@ -63,7 +63,7 @@ app.post("/register", async (req, res) => {
   });
 
 
-  app.post("/reset-password/:id/:token", async (req, res) => {
+  userrouter.post("/reset-password/:id/:token", async (req, res) => {
     const { id, token } = req.params;
     const { password } = req.body;
   
@@ -92,3 +92,6 @@ app.post("/register", async (req, res) => {
       res.json({ status: "Something Went Wrong" });
     }
   });
+
+
+  module.exports = userrouter;

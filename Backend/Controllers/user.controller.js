@@ -1,4 +1,4 @@
-const authorise=(role)=>{
+const authorise=(userType)=>{
     return(req,res,next)=>{
         if(removeEventListener.includes(req.cookies.role)){
             next();

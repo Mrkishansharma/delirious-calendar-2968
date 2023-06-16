@@ -1,7 +1,14 @@
 const jwt=require("jsonwebtoken")
 
 const authentication=(req,res,next)=>{
-    jwt.verify(req.cookies.token, 'token',
+    const token = req.headers.authorization.split(' ')[1];
+    
+    if (!token) {
+        return res.status(401).json({ error: "Unauthorized" });
+      }
+
+    jwt.verify(token, 'token',
+
     function(err,decoded){
         if(err){
             request.send(err)

@@ -6,7 +6,7 @@ const UserDetailsScehma = new mongoose.Schema(
     lname: String,
     email: { type: String, unique: true },
     password: String,
-    role: { type: String, enum: ["Admin", "customer"], required: true }
+    userType: { type: String, enum: ["Admin", "customer"], required: true }
   },
   {
     collection: "UserInfo",
