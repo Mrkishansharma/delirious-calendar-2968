@@ -14,7 +14,7 @@ stylistRouter.post('/addstylist', async (req, res) => {
         return res.send({ message: 'Stlist Added Successfully' })
 
     } catch (error) {
-        return res.status(500).send({ message: "Something went wrong", err:err.message });
+        return res.status(500).send({ message: "Something went wrong", err:error.message });
     }
 })
 
@@ -28,7 +28,7 @@ stylistRouter.get("/getstylist", async (req, res) => {
     });
   } catch (err) {
     console.log("err");
-    console.log({ message: "Something went wrong", err:err.message });
+    console.log({ message: "Something went wrong", err:error.message });
   }
 });
 

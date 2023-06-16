@@ -1,20 +1,21 @@
 
 
 const mongoose = require('mongoose');
-const { StyleModel } = require('./style.model');
+const userModel = require('./user.model');
 const { StylisttModel } = require('./stylist.model');
 
 const appointmentSchema = mongoose.Schema({
     date: { type: String },
-    time: { type: String },
-    stylesID: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: StyleModel,
-        required: true
-    },
+    time: { type: String},
     stylistID: {
         type: mongoose.Schema.Types.ObjectId,
         ref: StylisttModel,
+        required: true
+    },
+    status : {type : String, enum: ["Pending", "Cancel", "Reject", "Confirm"], default:"Pending"},
+    customerID : {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "userModel",
         required: true
     }
 }, {
