@@ -28,10 +28,18 @@
     </div>
     <!-- ------------------------------NAVBAR END-------------------- -->
 <br><br>
+
 <h1>OUR STYLIST </h1>
 
+    <form id="search">
+        <input type="text" id="stylist" placeholder="Find your stylist">
+        <input type="submit" id="btn" placeholder="Search">
+    </form>
+
 <div class="main-container">
-    <div class="filter">
+    <div class="filter" id="filter">
+        <h3>Filter by</h3>
+        <hr>
         <h4>service</h4>
            <input type="checkbox" class="salon" value="Hair Stylist" name="salon">
            <label for="">Hair Stylist</label>
@@ -73,9 +81,6 @@
 </div>
 
 <br><br>
-
-<!-- <img id="back" src="../image/x.jpg" alt=""> -->
-
        
 <!-- -----------------------------footer-------------------------------------- -->
 
@@ -117,51 +122,8 @@
         <p>Saturday: 11:00-09:00</p>
         <p>Sunday: 10:00-09:00</p>
     </div>
- </div>        
+ </div> 
+ <!-- <img id="back" src="https://media.istockphoto.com/id/1130436548/vector/vector-seamless-monochrome-pattern-for-hairdresser-tools-for-the-master-in-the-beauty-salon.jpg?s=612x612&w=0&k=20&c=ubTEK_qfKddQXvVwrJhQwl-MMCTXBGmv_7yP8a9O8J8=" alt="">        -->
 </body>
-<script>
-    const getData=()=>{
-        fetch("http://localhost:7500/stylist/getstylist",{
-            headers:{
-                "Content-Type":"application/json",
-            },
-        })
-        .then((res)=>res.json())
-        .then((data)=>{
-            console.log(data.data)
-            appendData(data.data)
-        })
-        .catch(err=>console.log(err))
-    }
-    getData();
-    let container=document.querySelector(".container")
-    function appendData(data){
-        container.innerHTML=""
-        data.forEach(element=>{
-            let div=document.createElement("div")
-
-            let div1=document.createElement("div")
-            let img=document.createElement("img")
-            img.src=element.image
-
-            let div2=document.createElement("div")
-            let name=document.createElement("h2")
-            name.textContent=element.name
-            let gender=document.createElement("p")
-            gender.textContent=element.gender
-            let speciality=document.createElement("h3")
-            speciality.textContent=element.speciality1+", "+element.speciality2+", "+element.speciality3
-            let rating=document.createElement("h3")
-            rating.textContent=element.rating
-            let btn=document.createElement("button")
-            btn.textContent="View Details >"
-            
-            div1.append(img)
-            div2.append(name,gender,speciality,rating,btn)
-            div.append(div1,div2)
-            container.append(div)
-        })
-
-    }
-</script>
+<script src="../Scripts/book.js"> </script>
 </html>

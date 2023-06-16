@@ -1,3 +1,10 @@
+
+let container=document.getElementsByClassName("container")
+let stylistData=JSON.parse(localStorage.getItem("stylist"))||null
+//console.log(stylistData)
+
+// ---------------------------------------------
+
 var modal = document.getElementById("myModal");
 
 var img = document.getElementById("myImg");
