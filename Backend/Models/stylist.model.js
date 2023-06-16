@@ -6,7 +6,11 @@ const stylistSchema = mongoose.Schema({
     name: {type: String},
     image: {type: String, required: true},
     bio: {type: String},
-    gender:{type : String}
+    gender:{type : String},
+    rating:{type:Number},
+    speciality1:{type:String},
+    speciality2:{type:String},
+    speciality3:{type:String}
     
 }, {
     versionKey: false,

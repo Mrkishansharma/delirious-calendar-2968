@@ -6,9 +6,9 @@ const stylistRouter = express.Router();
 
 
 stylistRouter.post('/addstylist', async (req, res) => {
-    const { name, image, gender,bio } = req.body;
+    const { name, image, gender,bio,speciality1,speciality2, speciality3,rating } = req.body;
     try {
-        const style = new StylisttModel({  name, image, gender,bio })
+        const style = new StylisttModel({  name, image, gender,bio,speciality1,speciality2, speciality3,rating })
         await style.save();
 
         return res.send({ message: 'Stlist Added Successfully' })
