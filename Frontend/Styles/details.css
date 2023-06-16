@@ -1,4 +1,32 @@
-
+#container{
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+#container p{
+ font-size: 20px;
+}
+#container>div:nth-child(1){
+  width: 63%;
+}
+#container>div:nth-child(2){
+  width: 33%;
+}
+#container img{
+  width: 100%;
+}
+#container button{
+  width:100%;
+  height: 50px;
+  font-size: 25px;
+  background-color: orangered;
+  border: none;
+  color: white;
+}
+#container button:hover{
+  background-color: rgb(247, 117, 70);
+}
 
 .ser{
     text-align: center;
@@ -108,6 +136,10 @@
         display: grid;
         grid-template-columns: repeat(2,1fr);
       }
+      #container{
+        display: flex;
+        flex-direction: column;
+      }
   }
   @media only screen and (max-width: 400px){
     .see{
@@ -150,4 +182,31 @@
       grid-template-columns: repeat(2,1fr);
       gap: 10px;
       }
+  }
+
+
+
+
+  
+  .checked {
+    color: orangered;
+  }
+  .client{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 90%;
+    margin: auto;
+    gap: 10px;
+  }
+  .client>div{
+    padding: 20px;
+    box-shadow: rgba(99, 102, 104, 0.2) 0px 8px 24px;
+  }
+  .client>div>div{
+    display: flex;
+  }
+  .client>div>div>img{
+    width: 40px;
+    border-radius: 30%;
+    margin-right: 20px;
   }

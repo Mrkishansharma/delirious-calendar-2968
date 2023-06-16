@@ -1,7 +1,25 @@
 
-let container=document.getElementsByClassName("container")
-let stylistData=JSON.parse(localStorage.getItem("stylist"))||null
-//console.log(stylistData)
+let container=document.getElementById("container")
+let stylistData=JSON.parse(localStorage.getItem("stylist"))||{}
+ //console.log(stylistData.name)
+
+ container.innerHTML=`
+  <div>
+    <img src="${stylistData.image}" alt="">
+  </div>
+  <div>
+    <h1>${stylistData.name}</h1>
+    <p>${stylistData.bio}</p>
+    <h4>${stylistData.gender}</h4>
+    <h2>Speciality:</h2>
+    <p>${stylistData.speciality1}</p>
+    <p>${stylistData.speciality2}</p>
+    <p>${stylistData.speciality3}</p>
+    <h2>Email: <span style="font-size: 20px;">abc@example.com</span></h2>
+    <h2>Mobile: <span id="span">+91 1234567890</span></h2>
+    <button>BOOK NOW</button>
+    </div>
+`;
 
 // ---------------------------------------------
 
