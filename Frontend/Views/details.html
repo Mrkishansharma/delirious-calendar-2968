@@ -18,6 +18,7 @@
            <div id="myLinks">
                 <div><a href="../index.html">HOME</a></div>
                 <div> <a href="service.html">SERVICES</a></div>
+                <div> <a href="#">VIEW APPOINMENT</a></div>
                 <div><a href="book.html" class="book" id="book">BOOK AN APPOINMENT</a></div>
                 <div><a href="#" class="login" id="login">Login/Signup</a></div> 
         </div>
@@ -31,8 +32,23 @@
 
 <div id="container">
     
-
+    
 </div>
+
+
+  <div id="myForm" class="popup-form">
+    <h2>Book Your Time</h2>
+    <label for="date">Date:</label>
+    <input type="date" id="date" required>
+
+    <label for="time">Time:</label>
+    <input type="time" id="time" required>
+
+    <button onclick="submitForm()">Submit</button>
+    <button onclick="closeForm()">Close</button>
+</div>
+
+<br><br>
 
 <h1 class="ser">See My Works</h1>
 <p class="ser">Here's a quick look at the beauty transformations that we have worked on. Whether it is a
