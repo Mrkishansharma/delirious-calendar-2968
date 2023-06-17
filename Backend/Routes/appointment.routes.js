@@ -56,7 +56,7 @@ appointmentRouter.get("/get/:userID", async (req, res) => {
 appointmentRouter.get("/getall", async (req, res) => {
   try {
     const data = await AppointmentModel.find();
-    console.log(data);
+   // console.log(data);
     res.send({
         message:"All Appointments",
         data : data
