@@ -37,14 +37,50 @@ let container=document.querySelector(".container")
             time.textContent=element.time
             let status=document.createElement("h2")
             status.textContent=element.status
-
-            let btn=document.createElement("button")
-            btn.textContent="Cancel"
-            
-            div1.append(img)
-            div2.append(name,service,date,time,status,btn)
-            div.append(div1,div2)
-            container.append(div)
+            if(element.status=="Pending")
+            {
+                status.style.color="orange"
+            }
+            else if(element.status=="Confirm")
+            {
+                status.style.color="green"
+            }
+            else{
+                status.style.color="red"
+            }
+            if(element.status=="Pending"){
+                
+                let btn=document.createElement("button")
+                btn.textContent="Cancel"
+                
+                btn.addEventListener("click",()=>{
+                    //console.log(element._id)
+                    fetch(`http://localhost:7500/appointment/cancel/${element._id}`,{
+                        method:"PATCH",
+                        headers:{
+                            "content-type":"application/json"
+                        }
+                    }).then(res=>res.json())
+                    .then(data=>{
+                        location.reload()
+                        console.log(data)
+                    })
+                    .catch(err=>{
+                        console.log(err)
+                    })
+                })
+                
+                div1.append(img)
+                div2.append(name,service,date,time,status,btn)
+                div.append(div1,div2)
+                container.append(div)
+            }
+            else{
+                div1.append(img)
+                div2.append(name,service,date,time,status)
+                div.append(div1,div2)
+                container.append(div)
+            }
         })
     }
 
