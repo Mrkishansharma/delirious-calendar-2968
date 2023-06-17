@@ -9,14 +9,16 @@ const authentication = (req, res, next) => {
 
     jwt.verify(token, 'styleSync',
 
-        function (err, decoded) {
-            if (err) {
-                request.send(err)
-            }
-            if (decoded) {
-                next()
-            }
-        })
+    function(err,decoded){
+        if(err){
+            res.send(err)
+        }
+        if(decoded){
+            next()
+        }
+    })
+
+
 }
 
 
