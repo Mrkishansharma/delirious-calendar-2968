@@ -1,18 +1,15 @@
 const express = require("express");
 const userrouter = express.Router();
-const User=require("../Models/user.model")
+const {UserInfo} =require("../Models/user.model")
 
 const mongoose = require("mongoose");
 userrouter.use(express.json());
 const cors = require("cors");
 userrouter.use(cors());
-const bcrypt = require("bcryptjs");
+const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-const JWT_SECRET="veeresh";
-
-
-
+const JWT_SECRET="styleSync";
 
 
 
@@ -21,12 +18,12 @@ userrouter.post("/register", async (req, res) => {
   
     const encryptedPassword = await bcrypt.hash(password, 10);
     try {
-      const oldUser = await User.findOne({ email });
+      const oldUser = await UserInfo.findOne({ email });
   
       if (oldUser) {
         return res.json({ error: "User Exists" });
       }
-      await User.create({
+      await UserInfo.create({
         fname,
         lname,
         email,
@@ -44,7 +41,7 @@ userrouter.post("/register", async (req, res) => {
   userrouter.post("/login-user", async (req, res) => {
     const { email, password } = req.body;
   
-    const user = await User.findOne({ email });
+    const user = await UserInfo.findOne({ email });
     if (!user) {
       return res.json({ error: "User Not found" });
     }
@@ -67,7 +64,7 @@ userrouter.post("/register", async (req, res) => {
     const { id, token } = req.params;
     const { password } = req.body;
   
-    const oldUser = await User.findOne({ _id: id });
+    const oldUser = await UserInfo.findOne({ _id: id });
     if (!oldUser) {
       return res.json({ status: "User Not Exists!!" });
     }
@@ -94,4 +91,4 @@ userrouter.post("/register", async (req, res) => {
   });
 
 
-  module.exports = userrouter;
+module.exports = userrouter;

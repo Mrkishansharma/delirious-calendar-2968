@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const userModel = require('./user.model');
 const { StylisttModel } = require('./stylist.model');
 
+const {UserInfo}  = require('./user.model')
+
 const appointmentSchema = mongoose.Schema({
     date: { type: String },
     time: { type: String},
@@ -15,7 +17,7 @@ const appointmentSchema = mongoose.Schema({
     status : {type : String, enum: ["Pending", "Cancel", "Reject", "Confirm"], default:"Pending"},
     customerID : {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "userModel",
+        ref: "UserInfo",
         required: true
     }
 }, {
