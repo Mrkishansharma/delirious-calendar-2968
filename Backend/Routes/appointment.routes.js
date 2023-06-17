@@ -26,12 +26,26 @@ appointmentRouter.post('/book', async (req, res) => {
     }
 })
 
-stylistRouter.get("/getstylist", async (req, res) => {
+appointmentRouter.get("/get/:userID", async (req, res) => {
   try {
-    const data = await StylisttModel.find();
+    const data = await AppointmentModel.find({customerID : req.params.userID});
     console.log(data);
     res.send({
-        message:"Stylist Data",
+        message:"Your Appointment",
+        data : data
+    });
+  } catch (err) {
+    console.log("err");
+    console.log({ message: "Something went wrong", err:err.message });
+  }
+});
+
+appointmentRouter.get("/getall", async (req, res) => {
+  try {
+    const data = await AppointmentModel.find();
+    console.log(data);
+    res.send({
+        message:"All Appointments",
         data : data
     });
   } catch (err) {
@@ -44,5 +58,5 @@ stylistRouter.get("/getstylist", async (req, res) => {
 
 
 module.exports = {
-    stylistRouter
+  appointmentRouter
 };
