@@ -71,6 +71,7 @@ function submitForm() {
   .then(data => {
     //console.log(data);
     alert(data?.message)
+    window.location.assign("view.html")
   }).catch(err => {
     console.log(err);
   })

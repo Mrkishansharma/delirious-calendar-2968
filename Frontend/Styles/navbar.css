@@ -26,6 +26,9 @@ body{
     padding-left: 40px;
     width: 30%;
 }
+.logo img{
+    width: 80%;
+}
 a{
     text-decoration: none;
     font-size: 15px;
@@ -72,7 +75,7 @@ a{
 }
 
 
-@media only screen and (max-width: 750px){
+@media only screen and (max-width: 950px){
     .icon{
         display: block;
         position: absolute;

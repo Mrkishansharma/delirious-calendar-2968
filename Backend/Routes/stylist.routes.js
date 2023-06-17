@@ -21,7 +21,7 @@ stylistRouter.post('/addstylist', async (req, res) => {
 stylistRouter.get("/getstylist", async (req, res) => {
   try {
     const data = await StylisttModel.find();
-    console.log(data);
+    //console.log(data);
     res.send({
         message:"Stylist Data",
         data : data
@@ -49,16 +49,28 @@ stylistRouter.get("/service",async(req,res)=>{
 })
 
 stylistRouter.get("/rating",async(req,res)=>{
-  let {q}=req.query
-  const stars=await StylisttModel.find({rating:q})
-  res.send(stars)
+  try {
+    let {q}=req.query
+    const stars=await StylisttModel.find({rating:q})
+    res.send(stars)
+  } catch (error) {
+    console.log("err");
+    console.log({ message: "Something went wrong", err:err.message });
+  }
+ 
 })
 
 
 stylistRouter.get("/search",async(req,res)=>{
-  let {q}=req.query
-  const stylist=await StylisttModel.find({name:{$regex:q,$options:'i'}})
-  res.send(stylist)
+  try {
+    let {q}=req.query
+    const stylist=await StylisttModel.find({name:{$regex:q,$options:'i'}})
+    res.send(stylist)
+  } catch (error) {
+    console.log("err");
+    console.log({ message: "Something went wrong", err:err.message });
+  }
+  
 })
 
 module.exports = {
