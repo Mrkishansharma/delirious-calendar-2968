@@ -42,7 +42,16 @@
     <input type="date" id="date" required>
 
     <label for="time">Time:</label>
-    <input type="time" id="time" required>
+    <select name="time" id="time">
+        <option value="11AM"> 11 AM</option>
+        <option value="12AM"> 12 AM</option>
+        <option value="1PM"> 1 PM</option>
+        <option value="2PM"> 2 PM</option>
+        <option value="3PM"> 3 PM</option>
+        <option value="4PM"> 4 PM</option>
+        <option value="5PM"> 5 PM</option>
+        <option value="6PM"> 6 PM</option>
+    </select>
 
     <button onclick="submitForm()">Submit</button>
     <button onclick="closeForm()">Close</button>
