@@ -17,9 +17,30 @@ let stylistData=JSON.parse(localStorage.getItem("stylist"))||{}
     <p>${stylistData.speciality3}</p>
     <h2>Email: <span style="font-size: 20px;">abc@example.com</span></h2>
     <h2>Mobile: <span id="span">+91 1234567890</span></h2>
-    <button>BOOK NOW</button>
+    <button id="booking" onClick="openForm()">BOOK NOW</button>
     </div>
+   
 `;
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+
+function submitForm() {
+  
+  var date = document.getElementById("date").value;
+  var time = document.getElementById("time").value;
+
+  console.log("Date: " + date);
+  console.log("Time: " + time);
+
+  closeForm();
+}
+
 
 // ---------------------------------------------
 
