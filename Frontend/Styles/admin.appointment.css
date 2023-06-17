@@ -1,0 +1,45 @@
+
+.appointmentBtnnnConfirm{
+    padding: 4px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    margin: 5px auto;
+    letter-spacing: 1px;
+}
+.appointmentBtnnnConfirm:hover{
+    padding: 4px 10px;
+    background-color: transparent;
+    color: #007bff;
+    border: 1px solid;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+.appointmentBtnnnReject{
+    padding: 4px 10px;
+    background-color: #007bff;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    margin: 5px auto;
+    letter-spacing: 1px;
+}
+.appointmentBtnnnReject:hover{
+    padding: 4px 10px;
+    background-color: transparent;
+    color: #007bff;
+    color: red;
+    border: 1px solid;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    cursor: pointer;
+}

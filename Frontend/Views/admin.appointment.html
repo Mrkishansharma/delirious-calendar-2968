@@ -16,6 +16,7 @@
         }
     </style>
     <link rel="stylesheet" href="../Styles/admin.css">
+    <link rel="stylesheet" href="../Styles/admin.appointment.css">
 </head>
 
 <body>
@@ -62,14 +63,17 @@
         <div class="board">
             <table width="100%">
                 <thead>
-                    <tr>
-                        <td>A</td>
-                        <td>B</td>
-                        <td>C</td>
-                        <td>D</td>
+                    <tr >
+                        <td>Image</td>
+                        <td>Service</td>
+                        <td>Customer ID</td>
+                        <td>Name [Stylist ID]</td>
+                        <td>Date [Time]</td>
+                        <td>Status</td>
+                        <td>Accept / Reject</td>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="appointmentntbody">
 
                 </tbody>
             </table>
@@ -79,3 +83,5 @@
 </body>
 
 </html>
+
+<script src="../Scripts/admin.appointment.js"></script>
