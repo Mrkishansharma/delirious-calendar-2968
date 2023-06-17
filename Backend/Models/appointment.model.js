@@ -19,7 +19,10 @@ const appointmentSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "UserInfo",
         required: true
-    }
+    },
+    name:{type:String},
+    image:{type:String},
+    service:{type:String}
 }, {
     versionKey: false,
     timestamps: true

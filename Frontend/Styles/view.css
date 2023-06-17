@@ -1,0 +1,88 @@
+
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+ width: 80%;
+  margin: auto;
+}
+.container>div{
+  background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(218, 215, 215);
+    margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+.container>div>div{
+  margin: 5px;
+  cursor: pointer;
+}
+.container>div h1{
+  color: orangered;
+}
+.container>div h2{
+  color: orange;
+}
+.container>div h3{
+  color: rgb(54, 53, 53);
+}
+.container>div h4{
+  color: rgb(54, 53, 53);
+}
+
+.container>div img{
+  width: 100%;
+  height: 220px;
+  border-radius: 20px;
+}
+.container>div{
+  text-align: left;
+}
+.container button{
+  padding: 8px;
+  background-color: red;
+  color: white;
+  font-size: 17px;
+  border: none;
+  border-radius: 10px;
+  width: 80px;
+}
+.container button:hover{
+ color: rgb(255, 68, 0);
+}
+
+
+
+
+
+ /* -----------------footer----------------------------- */
+
+ .footer{
+    background: rgb(233, 230, 230);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: space-around;
+    padding: 20px;
+  }
+
+  .footer a {
+    padding: 10px;
+    font-size: 30px;
+    width: 25px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    background: orangered;
+    color: white;
+  }
+  
+  .footer a:hover {
+      opacity: 0.7;
+  }
+  @media only screen and (max-width: 550px){
+    .footer{
+        display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 10px;
+      }
+  }
