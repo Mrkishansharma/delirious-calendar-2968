@@ -11,7 +11,7 @@ const authentication=(req,res,next)=>{
 
     function(err,decoded){
         if(err){
-            request.send(err)
+            res.send(err)
         }
         if(decoded){
             next()
