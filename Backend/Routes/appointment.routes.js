@@ -7,7 +7,11 @@ const appointmentRouter = express.Router();
 
 
 appointmentRouter.post('/book', async (req, res) => {
-    const { date, time, stylistID, status,customerID } = req.body;
+    let { date, time, stylistID, status,customerID } = req.body;
+
+
+    status = "Pending"
+
     try {
 
         const data = await AppointmentModel.find({stylistID,date,time})
