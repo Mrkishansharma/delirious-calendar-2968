@@ -27,6 +27,7 @@
   background-color: orangered;
   border: none;
   color: white;
+  border-radius: 10px;
 }
 #container button:hover{
   background-color: rgb(247, 117, 70);
@@ -232,14 +233,15 @@
     transform: translate(-50%, -50%);
     width: 300px;
     padding: 20px;
-    background-color: #f1f1f1;
+    background-color: rgb(212, 212, 212);
     border: 1px solid #ccc;
     border-radius: 4px;
     z-index: 9999;
+    border-radius: 10px;
 }
 
 .popup-form input[type="date"],
-.popup-form input[type="time"] {
+#time,#service{
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -254,3 +256,7 @@
     border: none;
     cursor: pointer;
 }
+#sub{
+  margin: 7px auto;
+}
+

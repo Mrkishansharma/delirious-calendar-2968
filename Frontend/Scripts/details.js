@@ -32,7 +32,7 @@ function closeForm() {
 
 function submitForm() {
 
-  // localStorage.setItem("StyleSyncLogedInUserID", "648d8db90ef794ba5d06731d")
+   //localStorage.setItem("StyleSyncLogedInUserID", "648d8db90ef794ba5d06731d")
   const userdID = localStorage.getItem('StyleSyncLogedInUserID')
   if(!userdID){
     alert(' Kindly Login First')
@@ -41,18 +41,22 @@ function submitForm() {
   
   var date = document.getElementById("date").value;
   var time = document.getElementById("time").value;
+  var service = document.getElementById("service").value;
 
-  console.log("Date: " + date);
-  console.log("Time: " + time);
+  // console.log("Date: " + date);
+  // console.log("Time: " + time);
 
   const payload = {
     date : date,
     time : time,
     stylistID : stylistData._id,
-    customerID: userdID
+    customerID: userdID,
+    name : stylistData.name,
+    image : stylistData.image,
+    service : service
   }
 
-  console.log(payload);
+  // console.log(payload);
 
   fetch(`http://localhost:7500/appointment/book`, {
     method : "POST",
@@ -61,11 +65,11 @@ function submitForm() {
     },
     body: JSON.stringify(payload)
   }).then(res=>{
-    console.log(res);
+    //console.log(res);
     return res.json()
   })
   .then(data => {
-    console.log(data);
+    //console.log(data);
     alert(data?.message)
   }).catch(err => {
     console.log(err);

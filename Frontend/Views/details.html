@@ -18,7 +18,7 @@
            <div id="myLinks">
                 <div><a href="../index.html">HOME</a></div>
                 <div> <a href="service.html">SERVICES</a></div>
-                <div> <a href="#">VIEW APPOINMENT</a></div>
+                <div> <a href="view.html">VIEW APPOINMENT</a></div>
                 <div><a href="book.html" class="book" id="book">BOOK AN APPOINMENT</a></div>
                 <div><a href="#" class="login" id="login">Login/Signup</a></div> 
         </div>
@@ -44,7 +44,7 @@
     <label for="time">Time:</label>
     <select name="time" id="time">
         <option value="11AM"> 11 AM</option>
-        <option value="12AM"> 12 AM</option>
+        <option value="12AM"> 12 PM</option>
         <option value="1PM"> 1 PM</option>
         <option value="2PM"> 2 PM</option>
         <option value="3PM"> 3 PM</option>
@@ -52,8 +52,15 @@
         <option value="5PM"> 5 PM</option>
         <option value="6PM"> 6 PM</option>
     </select>
+    <label for="time">Service:</label>
+    <select name="service" id="service">
+        <option value="Hair Styling">Hair Styling</option>
+        <option value="Skin Treatment">Skin Treatment</option>
+        <option value="Makeover">Makeover</option>
+        <option value="Bridal Make up">Bridal Make up</option>
+    </select>
 
-    <button onclick="submitForm()">Submit</button>
+    <button onclick="submitForm()" id="sub">Submit</button>
     <button onclick="closeForm()">Close</button>
 </div>
 
@@ -173,13 +180,13 @@
     </div>
     <div>
         <h3>Buisness Hours</h3>
-        <p>Monday - Closed</p>
-        <p>Tuesday: 11:00-09:00</p>
-        <p>Wednesday: 11:00-09:00</p>
-        <p>Thursday: 11:00-09:00</p>
-        <p>Friday: 11:00-09:00</p>
-        <p>Saturday: 11:00-09:00</p>
-        <p>Sunday: 10:00-09:00</p>
+        <p>Monday - 11:00-06:00</p>
+        <p>Tuesday: 11:00-06:00</p>
+        <p>Wednesday: 11:00-06:00</p>
+        <p>Thursday: 11:00-06:00</p>
+        <p>Friday: 11:00-06:00</p>
+        <p>Saturday: 11:00-06:00</p>
+        <p>Sunday: 10:00-06:00</p>
     </div>
  </div> 
     

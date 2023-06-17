@@ -7,7 +7,7 @@ const appointmentRouter = express.Router();
 
 
 appointmentRouter.post('/book', async (req, res) => {
-    let { date, time, stylistID, status,customerID } = req.body;
+    let { date, time, stylistID, status,customerID, name, image, service } = req.body;
 
     console.log('------->', req.body);
 
@@ -29,7 +29,7 @@ appointmentRouter.post('/book', async (req, res) => {
           }
         }
 
-        const style = new AppointmentModel({  date, time, stylistID, status,customerID})
+        const style = new AppointmentModel({  date, time, stylistID, status,customerID, name, image, service})
         await style.save();
 
         return res.send({ message: 'Appointment Booked.', status:"Pending" })
