@@ -8,7 +8,7 @@ const {UserInfo}  = require('./user.model')
 
 const appointmentSchema = mongoose.Schema({
     date: { type: String },
-    time: { type: String},
+    time: { type: String, enum: ["11AM", "12AM", "1PM", "2PM", "3PM", "4PM", "5PM", "6PM"]},
     stylistID: {
         type: mongoose.Schema.Types.ObjectId,
         ref: StylisttModel,
