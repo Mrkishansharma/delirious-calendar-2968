@@ -31,12 +31,47 @@ function closeForm() {
 }
 
 function submitForm() {
+
+  // localStorage.setItem("StyleSyncLogedInUserID", "648d8db90ef794ba5d06731d")
+  const userdID = localStorage.getItem('StyleSyncLogedInUserID')
+  if(!userdID){
+    alert(' Kindly Login First')
+    return
+  }
   
   var date = document.getElementById("date").value;
   var time = document.getElementById("time").value;
 
   console.log("Date: " + date);
   console.log("Time: " + time);
+
+  const payload = {
+    date : date,
+    time : time,
+    stylistID : stylistData._id,
+    customerID: userdID
+  }
+
+  console.log(payload);
+
+  fetch(`http://localhost:7500/appointment/book`, {
+    method : "POST",
+    headers : {
+      "content-type" : "application/json"
+    },
+    body: JSON.stringify(payload)
+  }).then(res=>{
+    console.log(res);
+    return res.json()
+  })
+  .then(data => {
+    console.log(data);
+    alert(data?.message)
+  }).catch(err => {
+    console.log(err);
+  })
+
+
 
   closeForm();
 }

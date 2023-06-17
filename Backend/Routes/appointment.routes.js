@@ -9,6 +9,8 @@ const appointmentRouter = express.Router();
 appointmentRouter.post('/book', async (req, res) => {
     let { date, time, stylistID, status,customerID } = req.body;
 
+    console.log('------->', req.body);
+
 
     status = "Pending"
 
