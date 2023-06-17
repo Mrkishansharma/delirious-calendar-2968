@@ -9,6 +9,7 @@ const { connection } = require('./Configs/db');
 const { styleRouter } = require('./Routes/style.routes');
 const { stylistRouter } = require('./Routes/stylist.routes');
 const userRoutes = require("./Routes/user.routes");
+const { appointmentRouter } = require('./Routes/appointment.routes');
 
 
 
@@ -24,6 +25,8 @@ app.use("/user", userRoutes)
 app.use('/style', styleRouter)
 
 app.use('/stylist', stylistRouter)
+
+app.use('/appointment', appointmentRouter)
 
 
 const Port = process.env.Port || 7500;
