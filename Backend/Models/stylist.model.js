@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 const stylistSchema = mongoose.Schema({
     name: {type: String},
-    image: {type: String, required: true},
+    image: {type: String},
     bio: {type: String},
     gender:{type : String},
     rating:{type:Number},
