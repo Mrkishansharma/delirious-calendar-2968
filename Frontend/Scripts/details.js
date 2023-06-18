@@ -70,7 +70,13 @@ function submitForm() {
   })
   .then(data => {
     //console.log(data);
-    alert(data?.message)
+     //alert(data?.message)
+     Swal.fire(
+      'Your appointment has been booked',
+      'See your status in the view appoinment',
+      'success'  
+    )
+  
   }).catch(err => {
     console.log(err);
   })

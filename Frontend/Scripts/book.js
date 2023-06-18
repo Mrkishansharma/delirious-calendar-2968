@@ -8,7 +8,7 @@ let stylistData = JSON.parse(localStorage.getItem("stylist")) || null;
         })
         .then((res)=>res.json())
         .then((data)=>{
-            //console.log(data.data)
+            console.log(data.data)
             appendData(data.data)
         })
         .catch(err=>console.log(err))

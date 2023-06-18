@@ -55,6 +55,7 @@ let container=document.querySelector(".container")
                 
                 btn.addEventListener("click",()=>{
                     //console.log(element._id)
+
                     fetch(`http://localhost:7500/appointment/cancel/${element._id}`,{
                         method:"PATCH",
                         headers:{
