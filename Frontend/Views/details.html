@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="../Styles/navbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+        
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
 </head>
 <body>
     <!-- _____________________NAVBAR________________________ -->
@@ -21,7 +28,9 @@
                 <div> <a href="service.html">SERVICES</a></div>
                 <div> <a href="view.html">VIEW APPOINMENT</a></div>
                 <div><a href="book.html" class="book" id="book">BOOK AN APPOINMENT</a></div>
-                <div><a href="../login.html" class="login" id="login">Login/Signup</a></div> 
+                <div><a href="./admin.Dashboard.html" class="book" id="adminPanel">Admin Panel</a></div>
+
+                <div><a href="../login.html" class="login" id="login" onclick="handleLoginBtn()">Login/Signup</a></div>
         </div>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
@@ -192,5 +201,17 @@
  </div> 
     
 </body>
+<script src="../Scripts/navbar.js"></script>
+
 <script src="../Scripts/details.js"></script>
 </html>
+
+<script language="javascript">
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    var yyyy = today.getFullYear();
+
+    today = yyyy + '-' + mm + '-' + dd;
+    $('#date').attr('min',today);
+</script>

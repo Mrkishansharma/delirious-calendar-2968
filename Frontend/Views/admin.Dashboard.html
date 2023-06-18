@@ -16,6 +16,7 @@
         }
     </style>
     <link rel="stylesheet" href="../Styles/admin.css">
+    <link rel="stylesheet" href="../Styles/admin.dashboard.css">
 </head>
 
 <body>
@@ -55,7 +56,7 @@
             </div>
         </div>
         <!-- info box -->
-        <h3 class="i-name">Dashboard</h3>
+        <h1 class="i-name" style="text-align: center; font-size: 24px;">Dashboard</h1>
         <div class="values">
 
         </div>
@@ -74,8 +75,48 @@
                 </tbody>
             </table>
         </div> -->
+        <div id="dashbaord_page_boxes">
+            <div>
+                <p> Total Users </p>
+                <p id="totalCout_user"> 0 </p>
+            </div>
+            <div>
+                <p> Total Stylists </p>
+                <p id="totalCout_Stylist"> 0 </p>
+            </div>
+            <div>
+                <p> Total Appointments </p>
+                <p id="totalCout_appointments"> 0 </p>
+            </div>
+            <div>
+                <p> Total Revenue </p>
+                <p id="totalCout_revenue"> Rs. 9856 /-</p>
+            </div>
+
+
+
+            <div>
+                <p> Total Confirmed Appointments </p>
+                <p id="totalCout_confirm"> 0 </p>
+            </div>
+            <div>
+                <p> Total Canceled Appointments </p>
+                <p id="totalCout_cancel">  0 </p>
+            </div>
+            <div>
+                <p> Total Rejected Appointments </p>
+                <p id="totalCout_reject"> 0 </p>
+            </div>
+            <div>
+                <p> Total Pending Appointments </p>
+                <p id="totalCout_pending"> 0 </p>
+            </div>
+
+        </div>
     </section>
 
 </body>
 
 </html>
+
+<script src="../Scripts/admin.dashboard.js"></script>

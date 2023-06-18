@@ -51,14 +51,15 @@ a{
    justify-content: space-between;
 }
 
-#book{
+.book{
     background-color: orangered;
     color:  white;
     padding: 10px;
     border-radius: 8px;
 }
-#myLinks #book:hover{
-    background-color: rgb(211, 60, 5);
+#myLinks .book:hover{
+    background-color: rgb(254, 231, 222);
+    color: #007bff;
 }
 #login{
     border: 1px solid orangered;
@@ -89,3 +90,11 @@ a{
 }
 
 
+
+
+
+
+
+#adminPanel{
+    display: none;
+}

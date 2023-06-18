@@ -4,10 +4,19 @@ fetchAndSoUserName()
 function fetchAndSoUserName(){
     const userFirstName_StyleSync = localStorage.getItem('userFirstName_StyleSync') || null
     const StyleSyncLogedInUserID = localStorage.getItem('StyleSyncLogedInUserID') || null
+    const userRole_StyleSync = localStorage.getItem('userRole_StyleSync') || null
 
 
     const loginBtn = document.getElementById('login')
+    const adminPanel = document.getElementById('adminPanel')
     console.log(loginBtn.innerText);
+
+    if(userRole_StyleSync=='Admin'){
+        adminPanel.style.display = 'inline'
+    }else{
+        adminPanel.style.display = 'none'
+
+    }
 
     // if(loginBtn.innerText == 'Login/Signup'){
         
@@ -40,6 +49,7 @@ function handleLoginBtn(){
             localStorage.removeItem('token_StyleSync')
             localStorage.removeItem('signedIn_StyleSync')
             localStorage.removeItem('StyleSyncLogedInUserID')
+            localStorage.removeItem('userRole_StyleSync')
     
             location.reload()
         }
