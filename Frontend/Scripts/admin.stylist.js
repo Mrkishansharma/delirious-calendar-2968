@@ -33,10 +33,29 @@ let container=document.getElementById("adminStylist")
             td3.textContent=element.gender
             let td4=document.createElement("td")
             td4.textContent=element.speciality1+", "+element.speciality2+", "+element.speciality3
+           let td5=document.createElement("td")
+           let btn=document.createElement("button")
+           btn.textContent="Remove"
            
+           btn.addEventListener("click",()=>{
+            console.log(element._id)
+           fetch(`http://localhost:7500/stylist/delete/${element._id}`,{
+             method:"DELETE",
+             headers:{
+                 "Content-Type": "application/json"
+             },
+             }).then(res=>res.json())
+             .then((data)=>{
+              console.log(data)
+              location.reload()
+            })
+             .catch(err=>console.log(err))
+         })
+
             
            td1.append(img)
-           tr.append(td1,td2,td3,td4)
+           td5.append(btn)
+           tr.append(td1,td2,td3,td4,td5)
             container.append(tr)
         })
     }
