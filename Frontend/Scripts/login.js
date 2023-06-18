@@ -48,7 +48,8 @@ login.addEventListener("submit", (e) => {
           '',
           'success'
         )
-        localStorage.setItem("userFirstName_StyleSync", res.userFirstName);
+        localStorage.setItem("userFirstName_StyleSync", res.userDetails.fname);
+        localStorage.setItem("userRole_StyleSync", res.userDetails.userType);
         localStorage.setItem("token_StyleSync", res.data);
         localStorage.setItem("signedIn_StyleSync",true)
         localStorage.setItem("StyleSyncLogedInUserID", res.userID)

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,25 +8,31 @@
     <link rel="stylesheet" href="../Styles/view.css">
     <link rel="stylesheet" href="../Styles/navbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
+
 <body>
-     <!-- _____________________NAVBAR________________________ -->
-     <div class="nav">
+    <!-- _____________________NAVBAR________________________ -->
+    <div class="nav">
         <div class="logo">
             <a href="../index.html"><img src="../image/logo1.png" alt=""></a>
         </div>
         <div class="sec">
-           <div id="myLinks">
+            <div id="myLinks">
                 <div><a href="../index.html">HOME</a></div>
                 <div> <a href="service.html">SERVICES</a></div>
                 <div> <a href="view.html">VIEW APPOINMENT</a></div>
                 <div><a href="book.html" class="book" id="book">BOOK AN APPOINMENT</a></div>
-                <div><a href="../login.html" class="login" id="login">Login/Signup</a></div> 
-        </div>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
+                <div><a href="./admin.Dashboard.html" class="book" id="adminPanel">Admin Panel</a></div>
+
+                <div><a href="../login.html" class="login" id="login" onclick="handleLoginBtn()">Login/Signup</a></div>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
         </div>
     </div>
     <!-- ------------------------------NAVBAR END-------------------- -->
@@ -35,49 +42,52 @@
 
 
 
-           
-<!-- -----------------------------footer-------------------------------------- -->
 
-<div class="footer">
-    <div>
-        <h2>SALON SAFARI</h2>
+    <!-- -----------------------------footer-------------------------------------- -->
+
+    <div class="footer">
         <div>
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-instagram"></a>
-        </div>
-    </div>
-    <div>
-        <h3>Services</h3>
-        <p>Domainracer</p>
-        <p>Hair Styling</p>
-        <p>Skin Treatment</p>
-        <p>Fashion Make Up</p>
-        <p>Bridal Make Up</p>
-        <p>Professional Photoshoot</p>
-    </div>
-    <div>
-        <div>
-            <h3>Email</h3>
-            <p>info@example.com</p>
+            <h2>SALON SAFARI</h2>
+            <div>
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
         </div>
         <div>
-            <h3>Address</h3>
-            <p>425 6th Ave, Chennai 111111, India</p>
+            <h3>Services</h3>
+            <p>Domainracer</p>
+            <p>Hair Styling</p>
+            <p>Skin Treatment</p>
+            <p>Fashion Make Up</p>
+            <p>Bridal Make Up</p>
+            <p>Professional Photoshoot</p>
+        </div>
+        <div>
+            <div>
+                <h3>Email</h3>
+                <p>info@example.com</p>
+            </div>
+            <div>
+                <h3>Address</h3>
+                <p>425 6th Ave, Chennai 111111, India</p>
+            </div>
+        </div>
+        <div>
+            <h3>Buisness Hours</h3>
+            <p>Monday - 11:00-06:00</p>
+            <p>Tuesday: 11:00-06:00</p>
+            <p>Wednesday: 11:00-06:00</p>
+            <p>Thursday: 11:00-06:00</p>
+            <p>Friday: 11:00-06:00</p>
+            <p>Saturday: 11:00-06:00</p>
+            <p>Sunday: 10:00-06:00</p>
         </div>
     </div>
-    <div>
-        <h3>Buisness Hours</h3>
-        <p>Monday - 11:00-06:00</p>
-        <p>Tuesday: 11:00-06:00</p>
-        <p>Wednesday: 11:00-06:00</p>
-        <p>Thursday: 11:00-06:00</p>
-        <p>Friday: 11:00-06:00</p>
-        <p>Saturday: 11:00-06:00</p>
-        <p>Sunday: 10:00-06:00</p>
-    </div>
- </div>
 
 </body>
+
+<script src="../Scripts/navbar.js"></script>
 <script src="../Scripts/view.js"></script>
+
 </html>

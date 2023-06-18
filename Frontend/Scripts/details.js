@@ -1,9 +1,9 @@
 
-let container=document.getElementById("container")
-let stylistData=JSON.parse(localStorage.getItem("stylist"))||{}
- //console.log(stylistData.name)
+let container = document.getElementById("container")
+let stylistData = JSON.parse(localStorage.getItem("stylist")) || {}
+//console.log(stylistData.name)
 
- container.innerHTML=`
+container.innerHTML = `
   <div>
     <img src="${stylistData.image}" alt="">
   </div>
@@ -32,13 +32,16 @@ function closeForm() {
 
 function submitForm() {
 
-   //localStorage.setItem("StyleSyncLogedInUserID", "648d8db90ef794ba5d06731d")
+  //localStorage.setItem("StyleSyncLogedInUserID", "648d8db90ef794ba5d06731d")
+
+
+
   const userdID = localStorage.getItem('StyleSyncLogedInUserID')
-  if(!userdID){
+  if (!userdID) {
     alert(' Kindly Login First')
     return
   }
-  
+
   var date = document.getElementById("date").value;
   var time = document.getElementById("time").value;
   var service = document.getElementById("service").value;
@@ -47,39 +50,39 @@ function submitForm() {
   // console.log("Time: " + time);
 
   const payload = {
-    date : date,
-    time : time,
-    stylistID : stylistData._id,
+    date: date,
+    time: time,
+    stylistID: stylistData._id,
     customerID: userdID,
-    name : stylistData.name,
-    image : stylistData.image,
-    service : service
+    name: stylistData.name,
+    image: stylistData.image,
+    service: service
   }
 
   // console.log(payload);
 
   fetch(`http://localhost:7500/appointment/book`, {
-    method : "POST",
-    headers : {
-      "content-type" : "application/json"
+    method: "POST",
+    headers: {
+      "content-type": "application/json"
     },
     body: JSON.stringify(payload)
-  }).then(res=>{
+  }).then(res => {
     //console.log(res);
     return res.json()
   })
-  .then(data => {
-    //console.log(data);
-     //alert(data?.message)
-     Swal.fire(
-      'Your appointment has been booked',
-      'See your status in the view appoinment',
-      'success'  
-    )
-  
-  }).catch(err => {
-    console.log(err);
-  })
+    .then(data => {
+      //console.log(data);
+      //alert(data?.message)
+      Swal.fire(
+        'Your appointment has been booked',
+        'See your status in the view appoinment',
+        'success'
+      )
+
+    }).catch(err => {
+      console.log(err);
+    })
 
 
 
@@ -101,40 +104,40 @@ var img7 = document.getElementById("myImg7");
 var img8 = document.getElementById("myImg8");
 
 var modalImg = document.getElementById("img01");
-img.onclick = function(){
+img.onclick = function () {
   modal.style.display = "block";
   modalImg.src = this.src;
 }
-img2.onclick = function(){
+img2.onclick = function () {
   modal.style.display = "block";
   modalImg.src = this.src;
 }
-img3.onclick = function(){
+img3.onclick = function () {
   modal.style.display = "block";
   modalImg.src = this.src;
 }
-img4.onclick = function(){
+img4.onclick = function () {
   modal.style.display = "block";
   modalImg.src = this.src;
 }
-img5.onclick = function(){
+img5.onclick = function () {
   modal.style.display = "block";
   modalImg.src = this.src;
 }
-img6.onclick = function(){
+img6.onclick = function () {
   modal.style.display = "block";
   modalImg.src = this.src;
 }
-img7.onclick = function(){
+img7.onclick = function () {
   modal.style.display = "block";
   modalImg.src = this.src;
 }
-img8.onclick = function(){
+img8.onclick = function () {
   modal.style.display = "block";
   modalImg.src = this.src;
 }
 
 var span = document.getElementsByClassName("close")[0];
-span.onclick = function() { 
+span.onclick = function () {
   modal.style.display = "none";
 }

@@ -1,0 +1,28 @@
+#dashbaord_page_boxes{
+    /* background-color: white; */
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px 50px;
+}
+
+#dashbaord_page_boxes > div{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #007bff;
+    color: white;
+    line-height: 40px;
+}
+
+#dashbaord_page_boxes > div:hover{
+    background-color: transparent;
+    color: white;
+    border: 1px solid;
+    line-height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+}
