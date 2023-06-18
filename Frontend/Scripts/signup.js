@@ -3,27 +3,28 @@ const url = "http://localhost:7500";
 let signbtn = document.getElementById("btn");
 signbtn.addEventListener("click", (e) => {
   e.preventDefault();
-  let name = document.getElementById("name").value;
+  let fname = document.getElementById("fname").value;
   let lname = document.getElementById("lname").value;
   let email = document.getElementById("email").value;
   let pass = document.getElementById("pass").value;
   
+  // showLoader();
 
-  if(!name || !pass || !email){
+  if(!fname || !lname || !pass || !email){
     Swal.fire({
       icon: "error",
       title: "Oops...",
-      text: "E-mail and Password can't be empty",
+      text: "Fill All the Required Details",
     });
     return;
   }
 
   // Loader Showing
-  // showLoader();
-  document.getElementById("btn").style.visibility = "hidden";
+  // document.getElementById("btn").style.visibility = "hidden";
 
   let signdata = {
-    name: name,
+    fname: fname,
+    lname:lname,
     email: email,
     password: pass,
   };
@@ -43,26 +44,26 @@ signbtn.addEventListener("click", (e) => {
       // document.getElementById("email").value = "";
       // document.getElementById("pass").value = "";
 
-      // if (res.ok) {
-      //   Swal.fire(
-      //       'Registration Successfull',
-      //       '',
-      //       'success'
-      //     )
-      //   // Transfer to login page here
-      //   setTimeout(()=>{
-      //     window.location.href = "./login.html";
-      //   },2500)
-      // } else {
-      //   Swal.fire({
-      //     icon: "error",
-      //     title: "Oops...",
-      //     text: res.msg,
-      //   });
+      if (res.status) {
+        Swal.fire(
+            'Registration Successfull',
+            '',
+            'success'
+          )
+        // Transfer to login page here
+        // setTimeout(()=>{
+        //   window.location.href = "./login.html";
+        // },2500)
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: res.error,
+        });
 
       //   hideLoader();
       //   document.getElementById("btn").style.visibility = "visible";
-      // }
+      }
     })
     .catch((err) => {
       console.log(err);
@@ -72,7 +73,7 @@ signbtn.addEventListener("click", (e) => {
         text: err.message,
       });
       // hideLoader();
-      document.getElementById("btn").style.visibility = "visible";
+      // document.getElementById("btn").style.visibility = "visible";
     });
 });
 

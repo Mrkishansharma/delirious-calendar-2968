@@ -1,6 +1,6 @@
 const express = require("express");
 const userrouter = express.Router();
-const {UserInfo} = require("../Models/user.model")
+const { UserInfo } = require("../Models/user.model")
 
 const mongoose = require("mongoose");
 userrouter.use(express.json());
@@ -36,7 +36,7 @@ userrouter.post("/register", async (req, res) => {
     });
     res.send({ status: "User Register Successfully" });
   } catch (error) {
-    res.send({ status: "something went wrong", err:error.message });
+    res.send({ status: "something went wrong", err: error.message });
   }
 });
 
@@ -45,22 +45,29 @@ userrouter.post("/register", async (req, res) => {
 userrouter.post("/login-user", async (req, res) => {
   const { email, password } = req.body;
   console.log('--->', req.body);
-  const user = await UserInfo.findOne({ email });
-  if (!user) {
-    return res.json({ error: "User Not found" });
-  }
-  if (await bcrypt.compare(password, user.password)) {
-    const token = jwt.sign({ email: user.email }, JWT_SECRET, {
-      expiresIn: "15m",
-    });
 
-    if (res.status(201)) {
-      return res.json({ status: "ok", data: token });
-    } else {
-      return res.json({ error: "error" });
+  try {
+    const user = await UserInfo.findOne({ email });
+    if (!user) {
+      return res.json({ error: "User Not found" });
     }
+    if (await bcrypt.compare(password, user.password)) {
+      const token = jwt.sign({ email: user.email }, JWT_SECRET, {
+        expiresIn: "15m",
+      });
+
+      // if (res.status(201)) {
+      return res.json({ status: "ok", data: token, userID: user._id, userFirstName: user.fname });
+      // } else {
+      // return res.json({ error: "error" });
+      // }
+    } else {
+      return res.json({ status: false, message:"Invalid Password" });
+
+    }
+  } catch (error) {
+    res.json({ status: "error", message: error.message });
   }
-  res.json({ status: "error", error: "InvAlid Password" });
 });
 
 

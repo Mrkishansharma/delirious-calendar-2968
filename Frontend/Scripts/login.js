@@ -20,7 +20,7 @@ login.addEventListener("submit", (e) => {
 
   // Loader Showing
 
-  document.getElementById("login").style.visibility = "hidden";
+  // document.getElementById("login").style.visibility = "hidden";
 
   let signdata = {
     email: lemail,
@@ -39,42 +39,42 @@ login.addEventListener("submit", (e) => {
 
     .then((res) => {
       console.log(res)
-      console.log(res.ok)
       // document.getElementById("lemail").value = "";
       // document.getElementById("lpass").value = "";
-      // if (res.ok) {
-      //   Swal.fire(
+      if (res.status=='ok') {
+        Swal.fire(
 
-      //     'Login Successfull',
-      //     '',
-      //     'success'
-      //   )
-      //   localStorage.setItem("userDetails", JSON.stringify(res.user_details));
-      //   localStorage.setItem("token", res.token);
-      //   localStorage.setItem("signedIn",true)
-      //   window.location.href = "./dashboard.html";
+          'Login Successfull',
+          '',
+          'success'
+        )
+        localStorage.setItem("userFirstName_StyleSync", res.userFirstName);
+        localStorage.setItem("token_StyleSync", res.data);
+        localStorage.setItem("signedIn_StyleSync",true)
+        localStorage.setItem("StyleSyncLogedInUserID", res.userID)
+        window.location.href = "./index.html";
 
-      // } else {
-      //   Swal.fire({
-      //     icon: "error",
-      //     title: "Oops...",
-      //     text: res.msg,
-      //   });
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: res.message,
+        });
 
-      //   hideLoader();
-      //   document.getElementById("login").style.visibility = "visible";
-      // }
+        // hideLoader();
+        // document.getElementById("login").style.visibility = "visible";
+      }
 
     })
     .catch((err) => {
       console.log(err);
       Swal.fire({
         icon: "error",
-        title: "Oops...",
+        title: "Oops... Something Went Wrong",
         text: err.message,
       });
       
-      document.getElementById("login").style.visibility = "visible";
+      // document.getElementById("login").style.visibility = "visible";
     });
 });
 
