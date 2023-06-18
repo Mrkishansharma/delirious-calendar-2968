@@ -371,3 +371,26 @@ i{
 
 
 }
+
+
+
+#GoogleAuthBtn{
+	/* border: 1px solid red; */
+	position: absolute;
+	top: 84%;
+	background-color: #007bff;
+	color: white;
+	padding: 8px 10px;
+	border: none;
+	border-radius: 5px;
+	width: 100%;
+	cursor: pointer;
+}
+
+#GoogleAuthBtn:hover{
+	background-color: transparent;
+	color: #007bff;
+	border: 1px solid;
+	letter-spacing: 2px;
+	font-weight: bold;
+}

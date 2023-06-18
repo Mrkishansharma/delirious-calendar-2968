@@ -9,6 +9,13 @@ userrouter.use(cors());
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
+const { passport } = require("../Configs/google.auth");
+const { googleAuthentication } = require("../Controllers/user.controller");
+
+
+
+// const { passport } = require("../Config/google-oauth")
+
 const JWT_SECRET = "veeresh";
 
 
@@ -62,7 +69,7 @@ userrouter.post("/login-user", async (req, res) => {
       // return res.json({ error: "error" });
       // }
     } else {
-      return res.json({ status: false, message:"Invalid Password" });
+      return res.json({ status: false, message: "Invalid Password" });
 
     }
   } catch (error) {
@@ -100,6 +107,27 @@ userrouter.post("/reset-password/:id/:token", async (req, res) => {
     res.json({ status: "Something Went Wrong" });
   }
 });
+
+
+
+
+
+
+
+
+// google auth
+
+
+userrouter.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
+
+
+userrouter.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/login', session:false }), googleAuthentication )
+
+
+
+
+
+
 
 
 

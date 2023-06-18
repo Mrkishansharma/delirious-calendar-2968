@@ -83,3 +83,13 @@ login.addEventListener("submit", (e) => {
 
 
 
+
+
+
+
+function HandleGoogleSignup(){
+
+  // document.getElementById('niteshgoogleauth').innerHTML = `<i class="fa fa-refresh fa-spin"></i> Google`;
+  window.location.href = `http://localhost:7500/user/auth/google`;
+
+}
