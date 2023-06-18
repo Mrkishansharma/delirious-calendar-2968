@@ -56,9 +56,7 @@
         </div>
         <!-- info box -->
         <h3 class="i-name">OUR STYLIST</h3>
-        <div class="values">
-            
-        </div>
+        <div id="page">
         <div class="board">
             <table width="100%">
                 <thead>
@@ -74,6 +72,42 @@
                 </tbody>
             </table>
         </div>
+        <div class="add">
+            <h1 style="color: white;">ADD STYLIST</h1>
+            <form onsubmit="submitform()">
+                <label for="image">Image URL:</label>
+                <input type="text" id="image" name="image" placeholder="Stylist Image URL " required>
+                
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Stylist Name " required>
+                
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+                
+                <label for="bio">Bio:</label>
+                <textarea id="bio" name="bio" placeholder="Stylist bio" required></textarea>
+                
+                <label for="speciality1">Speciality 1:</label>
+                <input type="text" id="speciality1" placeholder="Stylist Speciality" name="speciality1" >
+                
+                <label for="speciality2">Speciality 2:</label>
+                <input type="text" id="speciality2" placeholder="Stylist Speciality" name="speciality2" >
+                
+                <label for="speciality3">Speciality 3:</label>
+                <input type="text" id="speciality3" placeholder="Stylist Speciality" name="speciality3" >
+                
+                <label for="rating">Rating:</label>
+                <input type="text" id="rating" name="rating" placeholder="Stylist Rating" required>
+                
+                <input type="submit" value="Submit" >
+              </form>
+                
+        </div>
+    </div>
     </section>
  
 </body>

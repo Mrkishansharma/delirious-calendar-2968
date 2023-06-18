@@ -7,7 +7,7 @@ const adminGetStylist=()=>{
     })
     .then((res)=> res.json())
     .then((data)=>{
-        console.log(data.data)
+        //console.log(data.data)
         renderAllStylist(data.data)
     })
     .catch(err=>console.log(err))
@@ -41,6 +41,56 @@ let container=document.getElementById("adminStylist")
         })
     }
 
+//  -------------------------add stylist-----------------------------   
+
+ function submitform(){
+  var image = document.getElementById("image").value;
+  var name = document.getElementById("name").value;
+  var gender = document.getElementById("gender").value;
+  var bio = document.getElementById("bio").value;
+  var speciality1 = document.getElementById("speciality1").value;
+  var speciality2 = document.getElementById("speciality2").value;
+  var speciality3 = document.getElementById("speciality3").value;
+  var rating = document.getElementById("rating").value;
+  
+
+  
+  const payload = {
+    image : image,
+    name : name,
+    gender : gender, 
+    bio : bio,
+    speciality1 : speciality1,
+    speciality2 : speciality2,
+    speciality3 : speciality3,
+    rating : rating
+
+  }
+
+  console.log(payload)
+
+
+ 
+
+  fetch(`http://localhost:7500/stylist/addstylist`, {
+    method : "POST",
+    headers : {
+      "content-type" : "application/json"
+    },
+    body: JSON.stringify(payload)
+  }).then(res=>{
+    //console.log(res);
+    return res.json()
+  })
+  .then(data => {
+        console.log(data);
+     //alert(data?.message)
+  
+  }).catch(err => {
+    console.log(err);
+  })
+
+}
     
 
 
