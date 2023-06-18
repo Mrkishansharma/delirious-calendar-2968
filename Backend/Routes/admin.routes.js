@@ -12,7 +12,18 @@ adminRouter.get("/alluser", async (req, res) => {
         const user = await UserInfo.find();
         res.send({msg:"all users", data:user})
     } catch (error) {
-        res.json({ status: "error", error: "InvAlid Password" });
+        res.json({ status: "error", error: error.message });
+    }
+})
+
+
+adminRouter.get("/getone/:userID", async (req, res) => {
+    try {
+        const {userID} = req.params
+        const user = await UserInfo.findById({_id:userID});
+        res.send({msg:"userInfo", data:user})
+    } catch (error) {
+        res.json({ status: "error", error: error.message });
     }
 });
 
