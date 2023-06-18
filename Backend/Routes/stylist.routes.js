@@ -32,6 +32,23 @@ stylistRouter.get("/getstylist", async (req, res) => {
   }
 });
 
+
+stylistRouter.delete("/delete/:id",async(req,res)=>{
+  try {
+    const {id}=req.params
+ 
+    await StylisttModel.findByIdAndDelete({_id:id})
+    res.send({msg:"Stylist deleted"})
+  } catch (error) {
+    console.log("err");
+    console.log({ message: "Something went wrong", err:error.message });
+  }
+  
+   
+  
+})
+
+
 stylistRouter.get("/service",async(req,res)=>{
   try {
     let {q}=req.query

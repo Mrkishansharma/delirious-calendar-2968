@@ -652,3 +652,15 @@ form {
     border-color: #ccc;
   }
   
+
+  #adminStylist button{
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #adminStylist button:hover{
+    background-color: rgb(246, 58, 58);
+  }
