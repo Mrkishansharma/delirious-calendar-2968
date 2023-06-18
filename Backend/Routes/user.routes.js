@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 userrouter.use(express.json());
 const cors = require("cors");
 userrouter.use(cors());
-const bcrypt = require("bcryptjs");
+const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 const JWT_SECRET = "veeresh";
