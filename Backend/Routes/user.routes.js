@@ -57,7 +57,7 @@ userrouter.post("/login-user", async (req, res) => {
       });
 
       // if (res.status(201)) {
-      return res.json({ status: "ok", data: token, userID: user._id, userFirstName: user.fname });
+      return res.json({ status: "ok", data: token, userID: user._id, userDetails: user });
       // } else {
       // return res.json({ error: "error" });
       // }

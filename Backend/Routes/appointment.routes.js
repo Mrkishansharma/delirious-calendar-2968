@@ -21,7 +21,7 @@ appointmentRouter.post('/book', async (req, res) => {
         if(data.length){
           for(let i=0; i<data.length; i++){
             // console.log(data[i].status)
-            if(data[i].status == 'Confirm'){
+            if(data[i].status == 'Confirm' || data[i].status == 'Pending' ){
               return res.status(400).send({
                 msg : "On this time Stylist is not available "
               })
