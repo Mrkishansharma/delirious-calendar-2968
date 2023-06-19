@@ -6,6 +6,9 @@ const totalCout_appointments = document.getElementById('totalCout_appointments')
 
 const totalCout_revenue = document.getElementById('totalCout_revenue');
 
+
+const baseUrl_dashboard= `https://frightened-tuna-cummerbund.cyclic.app`
+
 setInterval(()=>{
 
     totalCout_revenue.innerText = ' Rs. ' + Math.ceil(Math.random()*9999+9999) + ' /-'
@@ -21,7 +24,7 @@ const totalCout_pending = document.getElementById('totalCout_pending');
 
 fetchAllUsers()
 function fetchAllUsers() {
-    fetch("http://localhost:7500/admin/alluser")
+    fetch(`${baseUrl_dashboard}/admin/alluser`)
         .then((res) => res.json())
         .then((data) => {
             console.log(data)
@@ -36,7 +39,7 @@ function fetchAllUsers() {
 
 adminGetStylist()
 function  adminGetStylist(){
-    fetch("http://localhost:7500/stylist/getstylist",{
+    fetch(`${baseUrl_dashboard}/stylist/getstylist`,{
         headers:{
             "Content-Type":"application/json",
         },
@@ -56,7 +59,7 @@ function  adminGetStylist(){
 
 fetchAllAppointments()
 function fetchAllAppointments() {
-    fetch("http://localhost:7500/appointment/getall")
+    fetch(`${baseUrl_dashboard}/appointment/getall`)
         .then((res) => res.json())
         .then((data) => {
             console.log(data)

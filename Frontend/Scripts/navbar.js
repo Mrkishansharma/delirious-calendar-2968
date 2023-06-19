@@ -1,6 +1,8 @@
 
 fetchAndSoUserName()
 
+const baseUrl_navbar = `https://frightened-tuna-cummerbund.cyclic.app`
+
 function fetchAndSoUserName() {
     const userFirstName_StyleSync = localStorage.getItem('userFirstName_StyleSync') || null
     const StyleSyncLogedInUserID = localStorage.getItem('StyleSyncLogedInUserID') || null
@@ -86,7 +88,7 @@ function showNameByGoogleAuth() {
 
     if(uuserid){
 
-        fetch(`http://localhost:7500/admin/getone/${uuserid}`)
+        fetch(`${baseUrl_navbar}/admin/getone/${uuserid}`)
             .then(res => res.json())
             .then(data => {
                 data = data.data

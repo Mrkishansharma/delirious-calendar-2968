@@ -1,4 +1,4 @@
-const url = "http://localhost:7500";
+const url = "https://frightened-tuna-cummerbund.cyclic.app";
 
 let signbtn = document.getElementById("btn");
 signbtn.addEventListener("click", (e) => {

@@ -1,4 +1,6 @@
 
+const baseUrl_view = `https://frightened-tuna-cummerbund.cyclic.app`
+
 const StyleSyncLogedInUserID_view = localStorage.getItem('StyleSyncLogedInUserID') || null
 if (!StyleSyncLogedInUserID_view) {
     alert('Kindly Login First')
@@ -7,7 +9,7 @@ if (!StyleSyncLogedInUserID_view) {
 
 
 const getData = () => {
-    fetch(`http://localhost:7500/appointment/get/${StyleSyncLogedInUserID_view}`, {
+    fetch(`${baseUrl_view}/appointment/get/${StyleSyncLogedInUserID_view}`, {
         headers: {
             "Content-Type": "application/json",
         },
@@ -65,7 +67,7 @@ function appendData(data) {
             btn.addEventListener("click", () => {
                 //console.log(element._id)
 
-                fetch(`http://localhost:7500/appointment/cancel/${element._id}`, {
+                fetch(`${baseUrl_view}/appointment/cancel/${element._id}`, {
                     method: "PATCH",
                     headers: {
                         "content-type": "application/json"

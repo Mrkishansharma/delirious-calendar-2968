@@ -1,4 +1,4 @@
-const url = "http://localhost:7500";
+const url = "https://frightened-tuna-cummerbund.cyclic.app";
 
 // login script is  start hare
 let login = document.getElementById("login-form");
@@ -90,6 +90,6 @@ login.addEventListener("submit", (e) => {
 function HandleGoogleSignup(){
 
   // document.getElementById('niteshgoogleauth').innerHTML = `<i class="fa fa-refresh fa-spin"></i> Google`;
-  window.location.href = `http://localhost:7500/user/auth/google`;
+  window.location.href = `https://frightened-tuna-cummerbund.cyclic.app/user/auth/google`;
 
 }

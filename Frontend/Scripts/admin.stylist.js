@@ -1,6 +1,8 @@
 
+const baseUrl_stylist = `https://frightened-tuna-cummerbund.cyclic.app`
+
 const adminGetStylist=()=>{
-    fetch("http://localhost:7500/stylist/getstylist",{
+    fetch(`${baseUrl_stylist}/stylist/getstylist`,{
         headers:{
             "Content-Type":"application/json",
         },
@@ -39,7 +41,7 @@ let container=document.getElementById("adminStylist")
            
            btn.addEventListener("click",()=>{
             console.log(element._id)
-           fetch(`http://localhost:7500/stylist/delete/${element._id}`,{
+           fetch(`${baseUrl_stylist}/stylist/delete/${element._id}`,{
              method:"DELETE",
              headers:{
                  "Content-Type": "application/json"
@@ -91,7 +93,7 @@ let container=document.getElementById("adminStylist")
 
  
 
-  fetch(`http://localhost:7500/stylist/addstylist`, {
+  fetch(`${baseUrl_stylist}/stylist/addstylist`, {
     method : "POST",
     headers : {
       "content-type" : "application/json"

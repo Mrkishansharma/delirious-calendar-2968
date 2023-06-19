@@ -1,9 +1,12 @@
 
 let usersInfoData = []
 
+const baseUrl_users = `https://frightened-tuna-cummerbund.cyclic.app`
+
+
 fetchAllUsers()
 function fetchAllUsers() {
-    fetch("http://localhost:7500/admin/alluser")
+    fetch(`${baseUrl_users}/admin/alluser`)
         .then((res) => res.json())
         .then((data) => {
             console.log(data)
@@ -42,7 +45,7 @@ function handleRoleUser(id, email){
         alert('You are not able to change the role of super admin')
         return
     }
-    fetch(`http://localhost:7500/admin/updateRole/${id}`,{
+    fetch(`${baseUrl_users}/admin/updateRole/${id}`,{
         method : "PATCH",
         headers : {
             "content-type":"application/json"
