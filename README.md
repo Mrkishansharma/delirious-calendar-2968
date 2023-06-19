@@ -53,6 +53,15 @@
 
 ![image](https://github.com/Mrkishansharma/delirious-calendar-2968/assets/89073918/e87a9a69-404d-4f92-aa11-38ac72b33fca)
 
+## Login Page
+
+![image](https://github.com/Mrkishansharma/delirious-calendar-2968/assets/89073918/bc7da8e2-dc19-4e34-ba2d-c15dc9bc566b)
+
+## Sign-up Page
+
+![image](https://github.com/Mrkishansharma/delirious-calendar-2968/assets/89073918/e13b04e1-8b11-4c7a-9f2d-b9f0228baef3)
+
+
 ## Stylist
 
 ![image](https://github.com/Mrkishansharma/delirious-calendar-2968/assets/89073918/9740e2f6-4a46-4dcb-85b6-a2f5780a4363)
