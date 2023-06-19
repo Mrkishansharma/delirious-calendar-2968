@@ -45,3 +45,47 @@
 # Contact
   For any questions or inquiries, please contact the project team at kishansharma6377@gmail.com.
 
+
+# Snapshot
+
+## Home Page
+![image](https://github.com/Mrkishansharma/delirious-calendar-2968/assets/89073918/616ef0bb-8e6f-4657-bfc5-9cc18a95e831)
+
+![image](https://github.com/Mrkishansharma/delirious-calendar-2968/assets/89073918/e87a9a69-404d-4f92-aa11-38ac72b33fca)
+
+## Stylist
+
+![image](https://github.com/Mrkishansharma/delirious-calendar-2968/assets/89073918/9740e2f6-4a46-4dcb-85b6-a2f5780a4363)
+
+## Book Appointment
+
+![image](https://github.com/Mrkishansharma/delirious-calendar-2968/assets/89073918/4c6e49f6-cb9d-4b26-bc90-75dd1eb2a8c4)
+
+## View Appointments
+
+![image](https://github.com/Mrkishansharma/delirious-calendar-2968/assets/89073918/af40f2e1-d1dc-4c3d-9db7-cd11313b1075)
+
+
+## Admin Panel - Dashboard
+
+![image](https://github.com/Mrkishansharma/delirious-calendar-2968/assets/89073918/49162739-a41f-4895-b1e7-a95a78925444)
+
+## Users - Management
+
+![image](https://github.com/Mrkishansharma/delirious-calendar-2968/assets/89073918/c39d768c-30c7-4d72-826e-9a435bf5e4b1)
+
+## appointments
+
+![image](https://github.com/Mrkishansharma/delirious-calendar-2968/assets/89073918/7c4bb254-d443-4f25-8bc6-e49c010f19da)
+
+## Stylists
+
+![image](https://github.com/Mrkishansharma/delirious-calendar-2968/assets/89073918/47cbfba4-bd9f-42f2-93bc-f08618765b11)
+
+## Services
+
+![image](https://github.com/Mrkishansharma/delirious-calendar-2968/assets/89073918/dbcc506f-f53a-4fcc-b197-4efa87bc2cef)
+
+
+
+
