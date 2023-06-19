@@ -1,4 +1,6 @@
 
+const baseUrl_details = `https://frightened-tuna-cummerbund.cyclic.app`
+
 let container = document.getElementById("container")
 let stylistData = JSON.parse(localStorage.getItem("stylist")) || {}
 //console.log(stylistData.name)
@@ -61,7 +63,7 @@ function submitForm() {
 
   // console.log(payload);
 
-  fetch(`http://localhost:7500/appointment/book`, {
+  fetch(`${baseUrl_details}/appointment/book`, {
     method: "POST",
     headers: {
       "content-type": "application/json"
@@ -74,15 +76,15 @@ function submitForm() {
     .then(data => {
 
       console.log(data);
-      if(data.message=='On this time This Stylist is not Available '){
-        
+      if (data.message == 'On this time This Stylist is not Available ') {
+
         Swal.fire(
           'This Stylist is Not Availbale Now',
           'This time slot is already booked by someone else',
           'error',
         )
 
-      }else{
+      } else {
         Swal.fire(
           'Your appointment has been booked',
           'See your status in the view appoinment',

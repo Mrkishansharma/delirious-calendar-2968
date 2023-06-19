@@ -1,8 +1,11 @@
 let userInfoObj = {}
 
+const baseUrl_appointment = `https://frightened-tuna-cummerbund.cyclic.app`
+
+
 fetchAllUsers()
 function fetchAllUsers() {
-    fetch("http://localhost:7500/admin/alluser")
+    fetch(`${baseUrl_appointment}/admin/alluser`)
         .then((res) => res.json())
         .then((data) => {
             console.log(data?.data)
@@ -24,7 +27,7 @@ function fetchAllUsers() {
 
 // fetchAllAppointments()
 function fetchAllAppointments() {
-    fetch("http://localhost:7500/appointment/getall")
+    fetch(`${baseUrl_appointment}/appointment/getall`)
         .then((res) => res.json())
         .then((data) => {
             console.log(data)
@@ -89,7 +92,7 @@ function handleConfirm(status,id){
         return
     }
 
-    fetch(`http://localhost:7500/appointment/confirm/${id}`, {
+    fetch(`${baseUrl_appointment}/appointment/confirm/${id}`, {
         method : "PATCH",
         headers : {
             "Content-type" : "application/json"
@@ -121,7 +124,7 @@ function handleReject(status,id){
         return
     }
 
-    fetch(`http://localhost:7500/appointment/reject/${id}`, {
+    fetch(`${baseUrl_appointment}/appointment/reject/${id}`, {
         method : "PATCH",
         headers : {
             "Content-type" : "application/json"
