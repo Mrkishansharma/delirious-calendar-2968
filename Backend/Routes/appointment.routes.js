@@ -23,7 +23,7 @@ appointmentRouter.post('/book', async (req, res) => {
             // console.log(data[i].status)
             if(data[i].status == 'Confirm' || data[i].status == 'Pending' ){
               return res.status(400).send({
-                msg : "On this time Stylist is not available "
+                message : "On this time This Stylist is not Available "
               })
             }
           }

@@ -10,7 +10,7 @@ setInterval(()=>{
 
     totalCout_revenue.innerText = ' Rs. ' + Math.ceil(Math.random()*9999+9999) + ' /-'
 
-},3000)
+},10000)
 
 const totalCout_confirm = document.getElementById('totalCout_confirm');
 const totalCout_cancel = document.getElementById('totalCout_cancel');

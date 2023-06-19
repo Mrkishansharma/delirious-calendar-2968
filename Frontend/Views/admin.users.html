@@ -42,6 +42,7 @@
             <div class="n1">
                 <h1 style="margin-left: 20px;">Welcome To Admin Panel</h1>
                 <div>
+                    <input type="text" placeholder="Search User Here" id="searchBoxAdmin" oninput="handleSearchUser(event)">
                     <i id="menu-btn" class="fa-solid fa-bars"></i>
                 </div>
                 <!-- <div class="search">
@@ -63,15 +64,16 @@
         <div class="board">
             <table width="100%">
                 <thead>
-                    <tr>
+                    <tr style="height: 40px; text-align: center; font-weight: bold;">
                         <td>First Name</td>
                         <td>Last Name</td>
                         <td>Email</td>
                         <td>Role</td>
+                        <td>Update Role</td>
                         <td>Contact</td>
                     </tr>
                 </thead>
-                <tbody id="usertbody">
+                <tbody id="usertbody" style="text-align: center;">
                     <!-- append here -->
                 </tbody>
             </table>

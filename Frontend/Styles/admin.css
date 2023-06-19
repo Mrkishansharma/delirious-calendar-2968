@@ -260,6 +260,7 @@ thead th {
     background: #F9FBFB;
     text-align: start;
     padding: 15px;
+    height:40px ;
 }
 
 tbody tr td {
@@ -663,4 +664,18 @@ form {
   }
   #adminStylist button:hover{
     background-color: rgb(246, 58, 58);
+  }
+
+
+
+
+  #searchBoxAdmin{
+    width: 320px;
+    margin: auto 120px;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    letter-spacing: 1px;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
   }
