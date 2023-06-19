@@ -1,3 +1,6 @@
+# Logo
+https://style-sync-app.netlify.app/image/logo1.png
+
 # delirious-calendar-2968
 
 # Style Sync - Salon Appointment Booking Website
