@@ -1,5 +1,6 @@
 # Logo
-https://style-sync-app.netlify.app/image/logo1.png
+![image](https://github.com/Mrkishansharma/delirious-calendar-2968/assets/89073918/b5725c61-01f0-478a-9a93-26125ac0dcb8)
+
 
 # delirious-calendar-2968
 
