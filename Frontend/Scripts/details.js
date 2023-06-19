@@ -72,13 +72,24 @@ function submitForm() {
     return res.json()
   })
     .then(data => {
-      //console.log(data);
+
+      console.log(data);
+      if(data.message=='On this time This Stylist is not Available '){
+        
+        Swal.fire(
+          'This Stylist is Not Availbale Now',
+          'This time slot is already booked by someone else',
+          'error',
+        )
+
+      }else{
+        Swal.fire(
+          'Your appointment has been booked',
+          'See your status in the view appoinment',
+          'success'
+        )
+      }
       //alert(data?.message)
-      Swal.fire(
-        'Your appointment has been booked',
-        'See your status in the view appoinment',
-        'success'
-      )
 
     }).catch(err => {
       console.log(err);

@@ -27,6 +27,21 @@ adminRouter.get("/getone/:userID", async (req, res) => {
     }
 });
 
+adminRouter.patch("/updateRole/:userID", async (req, res) => {
+    try {
+        const {userID} = req.params
+        const user = await UserInfo.findById({_id:userID});
+        if(user.email=='admin@stylesync.com'){
+            return res.send({msg:"You are not able to change the role of super admin"})
+        }
+        user.userType = user.Type=='Admin' ? "customer" : "Admin"
+        await user.save()
+        res.send({msg:"User Role is Successfully Changed"})
+    } catch (error) {
+        res.json({ msg: "Something went wrong", error: error.message });
+    }
+});
+
 module.exports = {
     adminRouter
 }
