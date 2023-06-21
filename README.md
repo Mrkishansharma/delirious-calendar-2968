@@ -35,7 +35,7 @@
 # Deployment 
   -Backend API
     https://frightened-tuna-cummerbund.cyclic.app/
-  -Website
+  -deployed url of Website
     https://style-sync-app.netlify.app/
 
 # Acknowledgments
@@ -43,7 +43,7 @@
   We would like to thank the open-source community for their invaluable contributions.
 
 # Contact
-  For any questions or inquiries, please contact the project team at kishansharma6377@gmail.com.
+  For any questions or inquiries, please contact the project team at kishansharma6377@gmail.com, veereshsp1234@gmail.com
 
 
 # Snapshot
